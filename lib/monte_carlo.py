@@ -20,14 +20,3 @@ def monte_carlo_option_price(S, K, T, r, sigma, option_type='call', num_simulati
     option_price = np.exp(-r * T) * np.mean(payoff)
     return option_price
 
-S = 100
-K = 105
-T = 1
-r = 0.05
-sigma = 0.2
-
-call_price = monte_carlo_option_price(S, K, T, r, sigma, option_type='call')
-put_price = monte_carlo_option_price(S, K, T, r, sigma, option_type='put')
-
-print("Monte Carlo Call option price:", call_price)
-print("Monte Carlo Put option price:", put_price)

@@ -14,14 +14,3 @@ def black_scholes_merton(S, K, T, r, sigma, option_type='call'):
 
     return option_price
 
-S = 100
-K = 105
-T = 1
-r = 0.05
-sigma = 0.2
-
-call_price = black_scholes_merton(S, K, T, r, sigma, option_type='call')
-put_price = black_scholes_merton(S, K, T, r, sigma, option_type='put')
-
-print("Call option price:", call_price)
-print("Put option price:", put_price)

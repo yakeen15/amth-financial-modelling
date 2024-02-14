@@ -31,16 +31,3 @@ def trinomial_tree_option_price(S, K, T, r, sigma, n, option_type='call'):
 
     option_price = option_values[n, 0]
     return option_price
-
-S = 100
-K = 105
-T = 1
-r = 0.05
-sigma = 0.2
-n = 2
-
-call_option_price = trinomial_tree_option_price(S, K, T, r, sigma, n, option_type='call')
-put_option_price = trinomial_tree_option_price(S, K, T, r, sigma, n, option_type='put')
-
-print("European Call Option Price:", call_option_price)
-print("European Put Option Price:", put_option_price)

@@ -42,7 +42,6 @@ def trinomial_tree_option_price(S, K, T, r, sigma, n, option_type='call'):
         stock_prices[n-j,j] = S*u**j
         for i in range(n-j+1,n+j+1):
             stock_prices[i,j] = stock_prices[i-1,j]/u
-    print(stock_prices)
     if option_type == 'call':
         option_values[:, -1] = np.maximum(0, stock_prices[:, -1] - K)
     elif option_type == 'put':

@@ -1,6 +1,8 @@
 import numpy as np
 from scipy.stats import norm
 
+#if T is in day-lengths, divide by 252 before passing the value to the function
+
 def binomial_tree_option_price(S, K, T, r, sigma, n, option_type='call'):
     delta_t = T / n
     u = np.exp(sigma * np.sqrt(delta_t))
